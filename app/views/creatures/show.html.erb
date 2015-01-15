@@ -5,13 +5,12 @@
       <h2>The creature you've selected is:</h2>
       <h4><strong>Name: </strong><%= @creature.name %><br>
       <strong>Description: </strong><%= @creature.desc %></h4>
-      <p>
-        <% @creature.tags.each do |tag, index| %>
-            <%= "- " unless index ==0 %>
-            <%= link_to tag.name, tag_path(tag.name) %>
+      <h4>Tags:</h4>
+        <% @creature.tags.each do |tag| %>
+            <h5><%= link_to tag.name, tag_path(tag.name) %></h5>
         <% end %>
 
-      </p><br>
+      <br>
       <%= link_to "Back", creatures_path, class: "btn btn-primary btn-md" %>
     </div>
 

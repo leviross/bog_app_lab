@@ -10,7 +10,7 @@ group :development, :test do #created for pushing to heroku
 end
 group :production do #production for heroku
   gem 'pg'
-  gem 'rails_12factor' #heroku will serve your static content efficiantly & postgres
+  gem 'rails_12factor' #heroku will serve your static content efficiantly & postgress
 end
 
 # Use SCSS for stylesheets
